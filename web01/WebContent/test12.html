@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>w
+<body>
+	<h1>자바스크립트 기본 문법 정리2</h1>
+	<script>
+	// 익명 함수는 일반 문장으로 취급한다.
+	// ㅇ
+		"use strict"; //문법을 엄격하게 검사하라!
+
+		console.log(plus(10, 20));
+		console.log(minus(10,20));
+		console.log(multiple(2,3,4,5));
+		
+		// arguments 히든 파라미터 배열
+		//   ㄴ 함수의 모든 파라미터 값은 arguments 배열에 저장된다.
+		
+		var plus = function(a, b) {
+			return a + b
+		}
+		
+		var minus = function(a,b) {
+			return arguments[0] - arguments[1];
+		}
+		
+		// 파라미터 선언된 변수 외에도 전달 가능
+		var multiple = function(a, b){
+			return a*b*arguments[2] * arguments[3];
+		}
+		
+		console.log(window.plus(30,40));
+	</script>
+</body>
+</html>
