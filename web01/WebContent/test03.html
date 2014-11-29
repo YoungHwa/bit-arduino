@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h2 {
+		color: red;
+	}
+	h1, h3 {
+		text-decoration: underline;
+	}
+	.g01 {
+		font-style: italic;
+		border-left: 10px solid blue;
+	}
+	.g02 {
+		border-top: red 2px dashed;
+	}
+	.g01, .g02 {
+		background-color: yellow;
+	}
+	#id01 {
+		text-decoration: line-through;
+	}
+</style>
+</head>
+<body>
+	<h1 class="g02">css selector</h1>
+	<h1 class="g01 g02">테스트1</h1>
+	<h1 id="id01">테스트2</h1>
+	<h2 id="id02" class="g01">테스트3</h2>
+	<h2 class="g01 g02">테스트4</h2>
+	<h3 class="g01">테스트5</h3>
+	<h3>테스트6</h3>
+</body>
+</html>

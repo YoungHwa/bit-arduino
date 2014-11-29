@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#header > a {
+		background-color: blue;
+		color: white;
+	}
+	/* #header a {
+		background-color: blue;
+		color: white;
+	} */
+	a.menu.g01 {
+		background-color: red;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<a href="#">회사로고</a>
+		<div id="member-bar">
+			<a class="menu" href="#">메뉴1</a>	
+			<a class="menu g01" href="#">메뉴2</a>	
+			<a class="menu" href="#">메뉴3</a>	
+			<button class="menu g01">메뉴4</button>
+		</div>
+	</div>
+	<div id="content">
+		<h1>제목</h1>
+		<p>내용
+			<a href="#"></a>
+		</p>
+	</div>
+	<div id="footer">
+		<p>이 사이트의 모든 권리는 xx에 있습니다. (02-123-1234)</p>	
+	</div>
+<!-- 
+	dom tree
+		ㄴ  웹 브라우저가 html을 해석하고 트리관계로 내부 컴포넌트를 관리.(html 컴포넌트의 트리구조)
+		ㄴ 화면에 출력되는 컴포넌트 관계
+	
+	Document
+		ㄴ head
+			ㄴ meta
+			ㄴ title
+			ㄴ style
+		ㄴ body
+			ㄴ div
+				ㄴ a
+				ㄴ a
+				ㄴ a
+				ㄴ a
+			ㄴ div
+				ㄴ h1
+				ㄴ p
+			ㄴ div
+				ㄴ p
+ -->
+</body>
+</html>
