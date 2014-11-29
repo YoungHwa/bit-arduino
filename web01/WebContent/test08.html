@@ -3,71 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-/* 	absolute 사용하기
-	 ㄴ 가장 가까운 조상을 기준으로 위치를 지정할 수 있다.
-	 ㄴ 기준이 되는 조상은 absolute, fixed, relative여야 한다.
- */
-	#header {
-		height:40px;
-		background-color: yellow;
-	}
-	#sidebar {
-		float: left;
-		width: 160px;
-		height: 600px;
-/* 		margin-right: 10px; */
-		background-color: gray;
-	}
-	#content1, #content2 {
-		width: 600px;
-		border: 1px solid black;
-		margin-left: 165px;
-		padding: 10px;
-	}
-	#footer {
-		clear: left;
-		height: 40px;
-		background-color: blue;
-	}
-	p {
-		border: 1px dotted lightgray;
-	}
-	#content1 {
-		position: relative;
-		left: -30px;
-		top: -30px;
-	}
-	#img1 {
-		position: absolute;
-		left: 50px;
-		top: 70px;
-		border: 1px solid gray;
-	}
-	#img2 {
-		position: fixed;
-		left: 50px;
-		top: 70px;
-		border: 1px solid gray;
-	}
-</style>
 </head>
 <body>
-	<div id="header"></div>
-	<div id="sidebar"></div>
-	<div id="content1">
-		<p>A deliverable of the HTML5Apps project, this edition includes changes and additions since July 2014, notably emerging work such as the Second Screen Presentation Working Group API to request display of content on an external screen, a draft API from the Web Bluetooth Community Group, Device APIs Working Group work on a generic pattern for sensors APIs, as well as work on an API to manage permissions across other APIs. Learn more about the Web and Mobile Interest Group.</p>
-		<p>W3C has published the October 2014 edition of Standards for Web Applications on Mobile,
-		 an overview of the variousoverview of the variousddd.
-		 <img id="img1" src="http://icon.daumcdn.net/w/icon/1312/19/152729032.png"></p>
-	</div>
-	<div id="content2">
-		<p>A deliverable of the HTML5Apps project, this edition includes changes and additions since July 2014, notably emerging work such as the Second Screen Presentation Working Group API to request display of content on an external screen, a draft API from the Web Bluetooth Community Group as well as work on an API to manage permissions across other APIs. Learn more about the Web and Mobile Interest Group.</p>
-		<p>W3C has published the October 2014 edition of Standards for Web Applications on Mobile, an overview of the various technologies developed in W3C that increase the capabilities of Web applications</p>
-	</div>
-	<div id="footer">
-		모든권리 있다.
-	</div>
-		<img id="img2" src="http://icon.daumcdn.net/w/icon/1312/19/152729032.png"></p>
+	<h1>자바 스크립트 기본 문법 정리</h1>
+	<!--
+		스크립트는 <script></script>에 
+		선언된 순서대로 실행됨
+		페이지 로딩 속도를 높이기 위해 사용
+		<script>태그를 바디 뒤에 위치한다.
+	-->
+	<h1>제목1</h1>
+
+	<script>
+		alert("11111");
+	</script>
+
+	<h1>제목2</h1>
+
+	<script>
+		alert("22222");
+	</script>
+
+	<h1>제목3</h1>
+
+	<script>
+		alert("33333");
+	</script>
 </body>
 </html>
