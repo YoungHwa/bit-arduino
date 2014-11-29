@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="d1">
+		<button id="btn1">요청</button>
+		<br>
+		<table id="t1" border="1">
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>조회수</th>
+			</tr>
+		</table>
+	</div>
+	<script>
+		document.getElementById("btn1").addEventListener("click", function() {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4) {
+					var obj = JSON.parse(xhr.responseText);
+					console.log(obj.name);
+				}
+			}
+			xhr.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=seoul,kr", true);
+			xhr.send();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	div {
+		border : 1px solid red;
+		padding : 20px;
+		margin: 20px; /* 위 아래는 합산 */
+	}
+</style>
+<body>
+	<h1>이벤트 처리</h1>
+	<div id="d1">
+		<div id="d11"><button id="btn1" onclick="var a=20; a+=100; console.log('okok'); alert('헐'+a);">버튼1</button></div>
+		<div id="d12"><button id="btn2">버튼2</button></div>
+	</div>
+	<div id="d2">
+		<div id="d21"><button id="btn3">버튼3</button></div>
+		<div id="d22"><button id="btn4">버튼4</button></div>
+	</div>
+	<script>
+		// 이벤트 리스너 등록
+		var b2 = document.getElementById("btn2")
+		b2.addEventListener("click", myclick);
+		
+		// 이벤트 발생했을 떄 호출될 함수 정의
+		function myclick(event) {
+			// 파라미터로 이벤트 정보를 받는다.
+			var a = 20;
+			a += 200;
+			console.log("okokok");
+			console.log("이거야");
+			console.log(a);
+		}
+		var b3 = document.getElementById("btn3")
+		b3.addEventListener("click", function(event) {
+			alert("ok");
+			
+		});
+		
+		document.getElementById("btn4").addEventListener("click", function(event) {
+// 			event.stopPropagation(); // 버블링 취소
+			event.stopImmediatepPropargation();
+			console.log("btn444444");			
+		});
+		
+		document.getElementById("d22").addEventListener("click", function(event) {
+			console.log("오호라 디투투");			
+		});
+		document.getElementById("d22").addEventListener("click", function(event) {
+			console.log("그렇군 디투투");			
+		});
+		document.getElementById("d22").addEventListener("click", function(event) {
+			console.log("얼씨구 디투투");			
+		});
+		
+		document.getElementById("d2").addEventListener("click", function(event) {
+			console.log("d2########");			
+		});
+		
+		
+	</script>
+</body>
+</html>
